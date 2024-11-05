@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Wing Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+        .header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 80px;
+            height: auto;
+        }
+        .welcome {
+            font-size: 36px;
+            color: #009900;
+            margin-top: 20px;
+        }
+        .message {
+            color: red;
+            font-size: 18px;
+        }
+        .login-container {
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .login-container select,
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container input[type="submit"] {
+            background-color: #0073e6;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+
+        .login-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .login-links a {
+            text-decoration: none;
+            color: #0073e6;
+            font-size: 14px;
+        }
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+        .captcha {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="https://www.dcrustedp.in/images/logo.png" alt="Left Logo" class="logo">
+        <div class="header">Deenbandhu Chhotu Ram University of Science and Technology Murthal Sonepat</div>
+        <img src="https://www.dcrustedp.in/images/logo.png" alt="Right Logo" class="logo">
+    </div>
+
+    <h1 class="welcome"><img src="https://www.dcrustedp.in/images/ewing.jpg" alt=""></h1>
+    <p class="message"><img src="https://www.dcrustedp.in/images/hindi.png" alt=""></p>
+
+    <div class="login-container">
+        <h4>Welcome - Enter your login details</h4>
+        <form action="resultPage.html">
+            <select required>
+                <option value="" disabled selected>Select</option>
+                <option value="student">UG Programs</option>
+                <option value="faculty">PHD/PG/Integrated Programs</option>
+                <option value="faculty">Education Programs</option>
+            </select>
+            <input type="text" name="username" placeholder=".........." required>
+            <input type="password" name="password" placeholder=".........." required>
+            <div class="captcha-container">
+                <input type="checkbox" id="captcha" required>
+                <label for="captcha" class="captcha-label">I'm not a robot</label>
+            </div>
+            <input type="submit" value="LOGIN">
+
+            <div class="login-links">
+                <a href="new-registration-url">New Registration</a>
+                <a href="forgot-password-url">Forget Password?</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</body>
+</html>
